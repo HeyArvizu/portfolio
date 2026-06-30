@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alan Arvizu — Expediente profesional · Estrategia, gestión y comunicación</title>
+<meta name="description" content="Expediente profesional de Alan Arvizu. Diseño con criterio estratégico: dirección a marcas, proyectos y experiencias conectando visión de negocio, organización y ejecución creativa. Monterrey, México." />
+<meta name="theme-color" content="#ffffff" />
+<meta property="og:title" content="Alan Arvizu — Expediente profesional" />
+<meta property="og:description" content="Diseño con criterio estratégico. Estrategia, gestión y comunicación para proyectos que necesitan dirección." />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="apple-touch-icon" href="assets/favicon.svg" />
+<link rel="mask-icon" href="assets/favicon.svg" color="#123B46" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet" />
+<style>
+/* =========================================================
+   ALAN ARVIZU — V8 · "Expediente / The Strategic Dossier"
+   Dirección documental sobre la base de DESIGN.md (petróleo +
+   superficie blanca editorial) que ninguna versión anterior
+   había implementado (V6/V7 eran "Apple × Cinematic"). No es
+   una foto-hero cinematográfica: es un documento profesional.
+   Portada tipográfica con índice, proyectos como fichas de
+   expediente, trayectoria como registro y un único cierre
+   oscuro a modo de contraportada/colofón.
+
+   Tipografía: VISBY CF (una sola familia, geométrica, sin
+   serif) como tipo principal. Los .woff2 viven en
+   assets/fonts/; mientras no estén presentes el navegador cae
+   con elegancia a Montserrat (Google Fonts), también geométrica.
+
+   Profundidad sin sombras (No-Shadow Rule): cambio de campo de
+   color (paper → marfil → carbón), hairlines de 1px y espacio.
+   Acento petróleo racionado (< ~10% de cualquier vista).
+   ========================================================= */
+/* Visby CF no incluye un peso "Regular" (400): el paquete trae Thin,
+   Light, Medium, DemiBold, Bold… Por eso 200 (titulares extralight)
+   se cubre con Thin, y 400 reusa Light para conservar la ligereza
+   editorial sin que el navegador sintetice un peso falso. */
+@font-face{font-family:'Visby CF';src:url('assets/fonts/VisbyCF-Thin.woff2') format('woff2');font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:'Visby CF';src:url('assets/fonts/VisbyCF-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Visby CF';src:url('assets/fonts/VisbyCF-Light.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Visby CF';src:url('assets/fonts/VisbyCF-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Visby CF';src:url('assets/fonts/VisbyCF-DemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Visby CF';src:url('assets/fonts/VisbyCF-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Visby CF';src:url('assets/fonts/VisbyCF-ExtraBold.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Visby CF';src:url('assets/fonts/VisbyCF-Heavy.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
+:root{
+  --paper:#ffffff;--marfil:#ECE8DF;--marfil-2:#F3F0E8;
+  --ink:#171816;--ink-2:#34352f;--dim:#6a6b63;
+  --line:rgba(23,24,22,.14);--line-2:rgba(23,24,22,.07);
+  --petrol:#123B46;--petrol-bright:#5e8a93;
+  --carbon:#141512;--carbon-2:#1c1d19;--carbon-line:rgba(236,232,223,.16);
+  --on-dark:#ECE8DF;--on-dark-dim:rgba(236,232,223,.66);
+  --c-universe:#1F6F5C;--c-afirme:#B5322B;--c-hamilton:#2E4A6E;--c-joy:#C4632B;
+  --font:'Visby CF','Montserrat','Avenir Next','Century Gothic',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --gut:clamp(20px,5vw,72px);--wrap:1280px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);line-height:1.66;font-weight:300;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+::selection{background:var(--petrol);color:#fff}
+:focus-visible{outline:2px solid var(--petrol);outline-offset:3px;border-radius:1px}
+.colophon :focus-visible{outline-color:var(--petrol-bright)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-64px;z-index:200;background:var(--ink);color:#fff;padding:11px 18px;font-size:.8rem;font-weight:600;letter-spacing:.04em;transition:top .25s var(--ease)}
+.skip:focus{top:14px}
+
+/* ---------- type primitives ---------- */
+.label{font-size:.68rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--dim)}
+.label-petrol{color:var(--petrol)}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+.lede{font-size:clamp(1.45rem,3vw,2.35rem);line-height:1.28;font-weight:200;letter-spacing:-.018em;color:var(--ink);max-width:24ch}
+.lede b{font-weight:500}
+.lede em{font-style:normal;color:var(--petrol);font-weight:400}
+.body{font-size:clamp(1rem,1.15vw,1.12rem);line-height:1.74;color:var(--ink-2);font-weight:300;max-width:58ch}
+.body+.body{margin-top:1.1em}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* ============================================================ MASTHEAD */
+.mast{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .35s var(--ease)}
+.mast.solid{border-color:var(--line)}
+.mast-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px;max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink)}
+.brand .mk{width:19px;height:19px;color:var(--petrol)}.brand .mk path{fill:currentColor}
+.brand .wm{font-size:.92rem;font-weight:600;letter-spacing:.02em}
+.brand .wm b{font-weight:600}.brand .wm span{font-weight:400}
+.mast-nav{display:flex;align-items:center;gap:6px}
+.mast-nav a{font-size:.78rem;font-weight:500;color:var(--dim);padding:7px 11px;border-radius:2px;transition:color .25s}
+.mast-nav a:hover{color:var(--ink)}
+.mast-nav a.active{color:var(--ink)}
+.mast-nav a.active{position:relative}
+.mast-nav a.active::after{content:"";position:absolute;left:11px;right:11px;bottom:2px;height:1px;background:var(--petrol)}
+.mast-cta{font-size:.76rem;font-weight:600;letter-spacing:.02em;border:1px solid var(--line);color:var(--ink);padding:9px 17px;border-radius:100px;transition:background .3s var(--ease),color .3s,border-color .3s}
+.mast-cta:hover{background:var(--petrol);color:#fff;border-color:var(--petrol)}
+/* Botón móvil — inspirado en la referencia: tres barras redondeadas, con
+   longitudes escalonadas y una microanimación suave. Sin caja/borde pesado. */
+.burger{display:none;position:relative;width:44px;height:44px;border:0;background:transparent;cursor:pointer;flex-direction:column;gap:5px;align-items:center;justify-content:center;padding:0;color:var(--petrol);isolation:isolate}
+.burger span{position:relative;z-index:1;display:block;height:3px;background:currentColor;border-radius:999px;transform-origin:center;transition:transform .42s var(--ease),opacity .22s ease,width .42s var(--ease),background-color .32s var(--ease)}
+.burger span:nth-child(1){width:18px;transform:translateX(-1px)}
+.burger span:nth-child(2){width:28px;transform:translateX(0)}
+.burger span:nth-child(3){width:18px;transform:translateX(7px)}
+.burger:hover span:nth-child(1){transform:translateX(3px)}
+.burger:hover span:nth-child(2){width:31px}
+.burger:hover span:nth-child(3){transform:translateX(2px)}
+.burger[aria-expanded="true"] span{background:var(--ink)}
+.burger[aria-expanded="true"] span:nth-child(1){width:26px;transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(.18)}
+.burger[aria-expanded="true"] span:nth-child(3){width:26px;transform:translateY(-8px) rotate(-45deg)}
+
+/* Menú móvil — sale del header, no como ventana independiente. El panel nace
+   debajo del masthead y se despliega hacia abajo con una transición editorial. */
+.drawer{position:fixed;inset:64px 0 0 0;z-index:55;visibility:hidden;pointer-events:none;background:transparent;transition:visibility 0s linear .52s}
+.drawer.open{visibility:visible;pointer-events:auto;transition:visibility 0s}
+.drawer-overlay{position:fixed;inset:64px 0 0 0;border:0;background:rgba(20,21,18,0);cursor:pointer;opacity:0;transition:opacity .42s var(--ease),background .42s var(--ease)}
+.drawer.open .drawer-overlay{opacity:1;background:rgba(20,21,18,.10)}
+.drawer-card{position:relative;top:auto;right:auto;width:100%;max-height:none;overflow:hidden;background:#F5F2EC;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0 0 26px 26px;color:var(--ink);transform:translateY(-105%);opacity:1;clip-path:none;transition:transform .64s var(--ease)}
+.drawer.open .drawer-card{transform:translateY(0)}
+.drawer-card::before{content:"";position:absolute;right:var(--gut);top:-70px;width:150px;height:150px;border:1px solid var(--line-2);border-radius:50%;pointer-events:none}
+.drawer-card::after{content:"";position:absolute;right:calc(var(--gut) + 18px);top:20px;width:7px;height:7px;border-radius:50%;background:var(--petrol);opacity:.9;pointer-events:none}
+.drawer-head{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px var(--gut) 16px;background:rgba(255,255,255,.52);border-bottom:1px solid var(--line)}
+.drawer-knot{width:auto;height:auto;border:0;background:none;color:var(--petrol);font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;display:block}
+.drawer-title{line-height:1.1}.drawer-title span{display:block;font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:4px}.drawer-title b{font-size:1.02rem;font-weight:500;letter-spacing:-.01em;color:var(--ink)}
+.drawer-x{display:none}
+.drawer-menu{position:relative;z-index:1;display:grid;background:var(--paper)}
+.drawer-menu a{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:12px;padding:17px var(--gut);border-bottom:1px solid var(--line-2);background:var(--paper);color:var(--ink);opacity:0;transform:translateY(-18px);transition:opacity .46s var(--ease),transform .46s var(--ease),background .28s var(--ease);transition-delay:calc(.13s + var(--i) * 42ms)}
+.drawer.open .drawer-menu a{opacity:1;transform:none}
+.drawer-menu a:nth-child(even){background:#F5F2EC}.drawer-menu a:hover,.drawer-menu a:active{background:var(--marfil)}
+.drawer-menu a span{font-size:.62rem;font-weight:700;letter-spacing:.16em;color:var(--petrol);align-self:start;margin-top:.26em}.drawer-menu a b{font-size:clamp(1.26rem,7vw,1.9rem);font-weight:300;letter-spacing:-.035em;line-height:.95}.drawer-menu a em{font-style:normal;font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);justify-self:end}
+.drawer-actions{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px var(--gut) 16px;background:#F5F2EC;border-top:1px solid var(--line)}
+.drawer-actions a{display:grid;place-items:center;min-height:44px;border:1px solid var(--line);border-radius:100px;background:rgba(255,255,255,.62);font-size:.64rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:0;transform:translateY(-10px);transition:opacity .42s var(--ease),transform .42s var(--ease),background .28s var(--ease);transition-delay:calc(.26s + var(--i) * 40ms)}
+.drawer.open .drawer-actions a{opacity:1;transform:none}.drawer-actions a:hover{background:#fff;color:var(--petrol)}
+
+/* ============================================================ HERO · SALUDO (retrato + gran tipografía)
+   Portada personal antes del expediente. Campo marfil muy claro,
+   "Hello!" como pieza tipográfica que pasa por DETRÁS del retrato.
+   El retrato se apoya a sangre en la base del hero, SIN máscara ni
+   degradado: la profundidad viene de la superposición limpia entre
+   texto y figura, no de efectos. Altura contenida para que el hero
+   funcione como portada sin obligar a un scroll largo. */
+.hero{position:relative;background:#F5F2EC;overflow:hidden;min-height:100svh;display:flex;align-items:stretch}
+/* Retícula contenida (lógica del hero anterior): el contenido vive dentro del
+   --wrap centrado —no full-bleed— y se equilibra verticalmente con
+   justify-content:center, ocupando toda la primera pantalla (100svh) para que
+   en laptop se lea completo y con presencia, no como franja corta. El retrato
+   se ancla a la base por dentro de esa retícula y "Hello!" pasa por detrás. */
+.hero-inner{position:relative;width:100%;max-width:var(--wrap);margin:0 auto;padding:clamp(76px,9vh,104px) var(--gut) clamp(40px,6vh,64px);min-height:100svh;display:flex;flex-direction:column;justify-content:center}
+.hero-hello{position:relative;z-index:1;font-size:clamp(4.5rem,25vw,21rem);line-height:.82;font-weight:900;letter-spacing:-.045em;color:transparent;white-space:nowrap;display:grid;width:max-content;max-width:100%;overflow:visible}
+.hero-hello .hello-outline,
+.hero-hello .hello-fill{grid-area:1/1;display:block}
+.hero-hello .hello-outline{color:transparent;-webkit-text-stroke:clamp(1px,.12vw,2px) rgba(23,24,22,.92);text-stroke:clamp(1px,.12vw,2px) rgba(23,24,22,.92);opacity:0;clip-path:inset(0 100% 0 0);animation:helloStrokeReveal .88s var(--ease) .10s forwards,helloStrokeSettle .52s var(--ease) 1.14s forwards}
+.hero-hello .hello-fill{color:var(--ink);opacity:0;clip-path:inset(0 100% 0 0);animation:helloFillReveal .82s var(--ease) .78s forwards}
+.hero-enter{opacity:0;transform:translateY(12px);animation:heroElementIn .68s var(--ease) forwards;will-change:opacity,transform}
+.hero-portrait.hero-enter{animation-delay:1.12s}
+.hero-name.hero-enter{animation-delay:1.28s}
+.hero-lead.hero-enter{animation-delay:1.44s}
+.hero-tags.hero-enter{animation-delay:1.58s}
+.hero-loc.hero-enter{animation-delay:1.64s}
+@keyframes helloStrokeReveal{
+  0%{opacity:0;clip-path:inset(0 100% 0 0)}
+  12%{opacity:1}
+  100%{opacity:1;clip-path:inset(0 0 0 0)}
+}
+@keyframes helloFillReveal{
+  0%{opacity:0;clip-path:inset(0 100% 0 0)}
+  12%{opacity:1}
+  100%{opacity:1;clip-path:inset(0 0 0 0)}
+}
+@keyframes helloStrokeSettle{
+  0%{opacity:1}
+  100%{opacity:0}
+}
+@keyframes heroElementIn{
+  0%{opacity:0;transform:translateY(12px)}
+  100%{opacity:1;transform:none}
+}
+.hero-detail{position:relative;z-index:3;margin-top:clamp(20px,3.2vh,36px);max-width:min(52%,560px)}
+.hero-name{font-size:clamp(2.1rem,5.2vw,3.9rem);font-weight:600;letter-spacing:-.032em;line-height:1;color:var(--ink)}
+.hero-lead{font-size:clamp(1rem,1.2vw,1.16rem);line-height:1.6;font-weight:300;color:var(--ink-2);margin-top:clamp(15px,2.2vh,21px);max-width:33ch}
+.hero-tags{font-size:.82rem;font-weight:500;letter-spacing:.05em;color:var(--ink);margin-top:clamp(20px,3vh,28px);display:flex;flex-wrap:wrap;align-items:center;gap:7px 13px}
+.hero-tags i{font-style:normal;color:var(--dim)}
+.hero-loc{font-size:.8rem;font-weight:400;letter-spacing:.02em;color:var(--dim);margin-top:14px;display:inline-flex;align-items:center;gap:8px}
+.hero-loc svg{width:13px;height:13px;color:var(--petrol);flex:none}
+/* Retrato anclado a la base, dentro del borde derecho de la retícula.
+   Sin máscara, degradado ni sombra: integración limpia sobre el marfil. */
+/* retrato más grande: crece hacia arriba (base anclada en bottom:0) dejando una
+   holgura constante de 52px arriba, por debajo del masthead (64px), para que la
+   cabeza nunca quede tapada por la barra. No altera la altura del hero (100svh). */
+.hero-portrait{position:absolute;bottom:0;right:clamp(20px,3.5vw,56px);z-index:2;height:min(calc(100% - 52px),900px);pointer-events:none}
+.hero-portrait img{height:100%;width:auto;object-position:bottom right;filter:grayscale(1) contrast(1.03)}
+/* Tablet / compacto: retrato más contenido; texto a la izquierda */
+@media (max-width:1024px){
+  .hero-hello{font-size:clamp(4.4rem,15vw,9rem)}
+  .hero-portrait{height:min(72%,620px)}
+  .hero-detail{max-width:54%}
+  .hero-lead{max-width:32ch}
+}
+@media (max-width:820px){
+  .hero-inner{padding-top:clamp(88px,12vh,116px)}
+  .hero-hello{font-size:clamp(4rem,17vw,7.5rem)}
+  .hero-portrait{height:min(60%,480px)}
+  .hero-detail{max-width:60%}
+}
+/* Móvil: composición editorial integrada y más compacta.
+   El Hello! conserva el peso del desktop, crece a casi todo el ancho y se
+   alinea al mismo margen izquierdo del contenido. El retrato queda por delante
+   y la línea inferior queda al ras del corte visual de la foto. */
+@media (max-width:560px){
+  .hero{min-height:clamp(540px,80svh,640px);overflow:hidden;display:block}
+  .hero-inner{position:relative;display:block;min-height:inherit;padding:clamp(78px,20vw,98px) var(--gut) 52px}
+
+  .hero-hello{position:absolute;left:var(--gut);top:clamp(84px,22vw,108px);z-index:1;width:max-content;max-width:none;font-size:clamp(6.25rem,35vw,9.65rem);line-height:.76;font-weight:900;letter-spacing:-.06em;white-space:nowrap;margin:0;overflow:visible}
+  .hero-hello .hello-outline{-webkit-text-stroke:1px rgba(23,24,22,.92);text-stroke:1px rgba(23,24,22,.92)}
+
+  .hero-portrait{position:absolute;z-index:2;right:-12vw;bottom:clamp(74px,19vw,86px);width:min(68vw,300px);height:auto;margin:0;pointer-events:none}
+  .hero-portrait img{height:auto;width:100%;object-fit:contain;object-position:bottom center}
+
+  .hero-detail{display:contents}
+  .hero-name{position:absolute;left:var(--gut);top:clamp(228px,58vw,286px);z-index:3;margin:0;max-width:48vw;font-size:clamp(2.08rem,9.2vw,2.9rem);line-height:.95;letter-spacing:-.035em}
+  .hero-lead{position:absolute;left:var(--gut);top:clamp(286px,72vw,348px);z-index:3;margin:0;max-width:22ch;font-size:clamp(.84rem,3.55vw,.93rem);line-height:1.48;color:var(--ink-2)}
+
+  .hero-tags{position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(40px,10vw,46px);z-index:4;margin:0;padding-top:12px;border-top:1px solid var(--line);font-size:.73rem;gap:6px 12px;letter-spacing:.035em}
+  .hero-loc{position:absolute;left:var(--gut);bottom:clamp(15px,4vw,18px);z-index:4;margin:0;font-size:.75rem}
+}
+@media (max-width:380px){
+  .hero{min-height:clamp(520px,80svh,610px)}
+  .hero-hello{font-size:clamp(5.8rem,34vw,8.5rem)}
+  .hero-portrait{right:-18vw;width:min(72vw,280px);bottom:72px}
+  .hero-name{top:clamp(216px,58vw,266px)}
+  .hero-lead{top:clamp(274px,73vw,326px);max-width:21ch;font-size:.82rem}
+}
+
+/* ============================================================ COVER / PORTADA */
+.cover{padding:clamp(76px,10vh,116px) 0 clamp(48px,7vh,84px)}
+.cover-rule{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 18px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:clamp(40px,7vh,72px)}
+.cover-rule span{font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.cover-rule .doc{color:var(--petrol)}
+.cover-eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin-bottom:clamp(22px,4vh,34px);display:inline-flex;align-items:center;gap:13px}
+
+.cover-title{font-size:clamp(2.7rem,8.4vw,6.6rem);line-height:.99;letter-spacing:-.035em;font-weight:200;color:var(--ink)}
+.cover-title b{font-weight:500}
+.cover-sub{font-size:clamp(1.08rem,1.7vw,1.4rem);line-height:1.62;font-weight:300;color:var(--ink-2);max-width:46ch;margin-top:clamp(26px,4vh,38px)}
+.cover-foot{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(36px,6vw,90px);margin-top:clamp(54px,9vh,104px);align-items:end}
+
+/* index / tabla de contenido */
+.index{border-top:1px solid var(--line)}
+.index a{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px solid var(--line-2);transition:padding-left .3s var(--ease)}
+.index a:hover{padding-left:10px}
+.index .ix-t{font-size:clamp(1.05rem,1.7vw,1.32rem);font-weight:400;letter-spacing:-.01em;color:var(--ink)}
+.index .ix-d{font-size:.74rem;font-weight:400;color:var(--dim);letter-spacing:.02em;text-align:right}
+.index a:hover .ix-t{color:var(--petrol)}
+
+/* tarjeta de identidad */
+.idcard{border:1px solid var(--line);padding:clamp(22px,3vw,30px)}
+.idcard h2{font-size:.66rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--petrol);margin-bottom:20px}
+.idcard dl{display:grid;grid-template-columns:auto 1fr;gap:11px 16px}
+.idcard dt{font-size:.64rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);padding-top:3px}
+.idcard dd{font-size:.92rem;font-weight:400;color:var(--ink);line-height:1.4}
+
+/* ============================================================ SECTION SCAFFOLD */
+section{position:relative}
+.pad{padding:clamp(80px,13vh,150px) 0}
+.s-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding-bottom:clamp(26px,4vh,42px);margin-bottom:clamp(40px,6vh,64px);border-bottom:1px solid var(--line)}
+.s-head .s-name{font-size:.74rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--ink)}
+.s-head .s-name::before{content:"";display:inline-block;width:0px;height:1px;background:var(--petrol);vertical-align:middle;margin-right:14px}
+.s-head .s-meta{font-size:.72rem;font-weight:500;letter-spacing:.04em;color:var(--dim);text-align:right}
+.s-head--row{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 18px}
+
+/* ============================================================ 01 · SOBRE MÍ */
+.sobre{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(40px,6vw,88px);align-items:start}
+.sobre-body .lede{margin-bottom:clamp(24px,3.5vh,34px)}
+.sobre-disc{margin-top:clamp(30px,4.5vh,40px);padding-top:24px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.sobre-disc span{font-size:.84rem;font-weight:400;color:var(--ink-2);display:flex;align-items:center;gap:10px}
+.sobre-disc span::before{content:"";width:5px;height:5px;background:var(--petrol);flex:none}
+.plate{position:relative}
+.plate figure{border:1px solid var(--line);overflow:hidden;aspect-ratio:4/5;background:var(--marfil)}
+.plate img{width:100%;height:100%;object-fit:cover;object-position:center 16%;filter:grayscale(.18) contrast(1.02)}
+.plate figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:12px;font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.plate figcaption .num{color:var(--petrol)}
+
+/* ============================================================ 02 · ENFOQUE (marfil band) */
+.enfoque{background:var(--marfil)}
+.manifesto{font-size:clamp(1.6rem,3.6vw,2.9rem);line-height:1.32;font-weight:200;letter-spacing:-.014em;max-width:26ch;margin-bottom:clamp(48px,8vh,92px)}
+.manifesto em{font-style:normal;font-weight:500;color:var(--petrol)}
+.method{border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:auto .55fr 1fr;gap:clamp(16px,3.5vw,56px);align-items:baseline;padding:clamp(24px,3.6vh,38px) 0;border-bottom:1px solid var(--line)}
+.step-n{font-size:.78rem;font-weight:600;color:var(--petrol);letter-spacing:.06em}
+.step h3{font-size:clamp(1.4rem,2.8vw,2.1rem);font-weight:300;letter-spacing:-.018em;line-height:1.05}
+.step p{font-size:clamp(.96rem,1.1vw,1.04rem);line-height:1.6;color:var(--ink-2);max-width:42ch}
+
+/* ============================================================ 03 · PROYECTOS — fichas de expediente */
+.cases{margin-top:clamp(8px,2vh,18px)}
+.case{--cc:var(--petrol);display:grid;grid-template-columns:.42fr 1.58fr;gap:clamp(28px,5vw,72px);padding:clamp(40px,7vh,80px) 0;border-bottom:1px solid var(--line)}
+.case:first-child{border-top:1px solid var(--line)}
+.case-aside{position:relative}
+.case-n{font-size:clamp(2.4rem,4.2vw,3.6rem);font-weight:200;letter-spacing:-.03em;line-height:.9;color:var(--ink);display:flex;align-items:flex-start;gap:12px}
+.case-n .cdot{width:9px;height:9px;background:var(--cc);margin-top:.5em;flex:none}
+.case-meta{margin-top:clamp(22px,3.5vh,32px);display:grid;grid-template-columns:auto 1fr;gap:10px 16px}
+.case-meta dt{font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);padding-top:3px}
+.case-meta dd{font-size:.86rem;font-weight:400;color:var(--ink);line-height:1.42}
+.case-main{min-width:0}
+.case-kicker{font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cc);margin-bottom:14px}
+.case-title{font-size:clamp(1.7rem,3.4vw,2.7rem);font-weight:300;letter-spacing:-.022em;line-height:1.04}
+.case-concept{font-size:clamp(1.1rem,1.6vw,1.4rem);font-weight:400;line-height:1.34;color:var(--ink);margin-top:16px;max-width:30ch}
+.case-body{font-size:clamp(.98rem,1.1vw,1.06rem);line-height:1.72;color:var(--ink-2);max-width:60ch;margin-top:16px}
+.case-proof{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-2);display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:baseline}
+.case-proof dt{font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cc)}
+.case-proof dd{font-size:.95rem;font-weight:400;color:var(--ink);line-height:1.5;max-width:54ch}
+.case-fig{margin-top:24px;border:1px solid var(--line);overflow:hidden;aspect-ratio:16/9;background:var(--marfil)}
+.case-fig img{width:100%;height:100%;object-fit:cover;filter:grayscale(.12) contrast(1.03)}
+.case-swatch{margin-top:24px;border:1px solid var(--line);aspect-ratio:16/9;background:var(--cc);position:relative;display:flex;align-items:flex-end;padding:clamp(20px,3vw,32px);overflow:hidden}
+.case-swatch::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.10),transparent 55%)}
+.case-swatch .sw-name{position:relative;z-index:1;font-size:clamp(1.3rem,3vw,2.1rem);font-weight:300;color:#fff;line-height:1.06;letter-spacing:-.02em}
+.case-swatch .sw-name b{font-weight:600;display:block}
+.case-swatch .sw-mark{position:absolute;top:clamp(18px,2.4vw,26px);right:clamp(20px,3vw,30px);z-index:1;font-size:.64rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+
+/* ============================================================ 04 · EXPERIENCIA — registro */
+.ledger{position:relative}
+.ledger-head{display:grid;grid-template-columns:.26fr 1fr .9fr;gap:clamp(16px,3vw,48px);padding-bottom:14px;border-bottom:1px solid var(--ink);margin-bottom:4px}
+.ledger-head span{font-size:.62rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.row{display:grid;grid-template-columns:.26fr 1fr .9fr;gap:clamp(16px,3vw,48px);align-items:baseline;padding:clamp(22px,3.4vh,34px) 0;border-bottom:1px solid var(--line);transition:padding-left .35s var(--ease)}
+.row:hover{padding-left:10px}
+.row-phase{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--petrol);display:flex;align-items:center;gap:11px}
+.row-phase::before{content:"";width:7px;height:7px;border:1px solid var(--petrol);border-radius:50%;flex:none;transition:background .3s}
+.row.key .row-phase::before{background:var(--petrol)}
+.row-role{font-size:clamp(1.25rem,2.4vw,1.85rem);font-weight:300;letter-spacing:-.018em;line-height:1.06}
+.row.key .row-role::after{content:"·";color:var(--petrol);margin-left:8px}
+.row-place{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--dim);margin-top:6px;text-transform:uppercase}
+.row-note{font-size:.96rem;line-height:1.58;color:var(--ink-2)}
+
+/* ============================================================ 05 · CONTACTO / COLOFÓN (carbón) */
+.colophon{background:var(--carbon);color:var(--on-dark)}
+.colophon .s-head{border-color:var(--carbon-line)}
+.colophon .s-head .s-name{color:var(--on-dark)}
+.colophon .s-head .s-name::before{background:var(--petrol-bright)}
+.colophon .s-head .s-meta{color:var(--on-dark-dim)}
+.contact-big{font-size:clamp(2rem,5.4vw,4.2rem);line-height:1.08;letter-spacing:-.028em;font-weight:200;color:var(--on-dark);max-width:16ch;margin-bottom:clamp(38px,6vh,58px)}
+.contact-big b{font-weight:500}
+.mail{display:inline-block;font-size:clamp(1.3rem,3.4vw,2.3rem);font-weight:300;letter-spacing:-.01em;color:var(--on-dark);border-bottom:1px solid var(--carbon-line);padding-bottom:8px;transition:border-color .3s,color .3s}
+.mail:hover{border-color:var(--petrol-bright);color:var(--petrol-bright)}
+.contact-row{display:flex;flex-wrap:wrap;gap:14px 36px;margin-top:clamp(34px,5vh,52px)}
+.contact-row a{font-size:.92rem;font-weight:400;color:var(--on-dark-dim);display:inline-flex;align-items:center;gap:8px;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .3s,border-color .3s}
+.contact-row a:hover{color:var(--on-dark);border-color:var(--carbon-line)}
+
+/* colofón base */
+.colo-base{margin-top:clamp(64px,11vh,120px);padding-top:30px;border-top:1px solid var(--carbon-line);display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:32px;align-items:start}
+.colo-brand{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.colo-brand .mk{width:26px;height:26px;color:var(--petrol-bright)}.colo-brand .mk path{fill:currentColor}
+.colo-brand .wm{font-size:1rem;font-weight:600;color:var(--on-dark)}
+.colo-intro{font-size:.9rem;line-height:1.62;color:var(--on-dark-dim);max-width:34ch}
+.colo-col h4{font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark);margin-bottom:15px}
+.colo-col a{display:block;font-size:.88rem;color:var(--on-dark-dim);margin-bottom:11px;transition:color .3s}
+.colo-col a:hover{color:var(--on-dark)}
+.colo-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 18px;margin-top:clamp(42px,7vh,68px);padding-top:22px;border-top:1px solid var(--carbon-line);font-size:.72rem;letter-spacing:.04em;color:rgba(236,232,223,.46)}
+
+/* ============================================================ RESPONSIVE */
+@media (max-width:900px){
+  .mast-nav{display:none}.burger{display:flex}.mast-cta{display:none}
+  .cover-foot{grid-template-columns:1fr;gap:clamp(40px,7vh,64px)}
+  .sobre{grid-template-columns:1fr;gap:clamp(34px,6vh,52px)}
+  .plate{order:-1;max-width:380px}
+  .case{grid-template-columns:1fr;gap:clamp(20px,4vh,30px)}
+  .case-meta{grid-template-columns:auto 1fr;max-width:420px}
+  .step{grid-template-columns:auto 1fr;gap:6px 22px}
+  .step p{grid-column:2}
+  .colo-base{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .cover-title{font-size:clamp(2.3rem,11vw,3.4rem)}
+  .index a{grid-template-columns:1fr;gap:10px 14px}
+  .index .ix-d{display:none}
+  .sobre-disc{grid-template-columns:1fr}
+  .ledger-head{display:none}
+  .row{grid-template-columns:1fr;gap:7px}
+  .row-note{margin-top:2px}
+  .colo-base{grid-template-columns:1fr}
+}
+@media (max-width:380px){
+  .step{grid-template-columns:1fr}
+  .step h3{margin-top:2px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none}
+  .hero-hello .hello-outline{display:none}
+  .hero-hello .hello-fill{opacity:1;clip-path:none;animation:none}
+  .hero-enter{opacity:1;transform:none;animation:none}
+  .drawer-card,.drawer-menu a,.drawer-actions a{transform:none!important;clip-path:none!important;opacity:1!important}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ MASTHEAD ============ -->
+<header class="mast" id="mast">
+  <div class="mast-in">
+    <a href="#top" class="brand" aria-label="Alan Arvizu — inicio">
+      <svg class="mk" viewBox="0 0 200 201.34" aria-hidden="true"><path d="M188.99,148.65L123.84,20.09c-5.09-10.04-15.24-16.41-26.5-16.62-11.29-.2-21.64,5.78-27.1,15.63l-13.59,24.53c-7.87,14.2-3.21,32.01,10.59,40.52l25.72,15.94,12.88-20.79-25.74-15.95c-2.68-1.65-3.58-5.1-2.06-7.85l13.59-24.53c1.55-2.79,4.19-3.02,5.25-3.03,1.06.02,3.69.37,5.13,3.22l65.15,128.56c1.24,2.45.59,5.49-1.54,7.22-1.96,1.59-4.7,1.75-6.83.41l-99.3-62.57c-7.14-4.5-15.92-5.83-24.06-3.62-8.15,2.19-15.07,7.75-18.99,15.22l-9.54,18.23c-7.1,13.57-2.95,30.35,9.75,39.1l35.72,24.18h43.63l-65.54-44.38c-2.44-1.69-3.25-4.94-1.87-7.56l9.54-18.23c1.04-1.99,2.75-2.7,3.68-2.95.93-.25,2.77-.49,4.66.7l99.3,62.57c11,6.93,25.18,6.09,35.28-2.1,11.03-8.94,14.37-24.62,7.95-37.28"/></svg>
+      <span class="wm"><b>Alan</b> <span>Arvizu</span></span>
+    </a>
+    <nav class="mast-nav" id="mastNav" aria-label="Índice del documento">
+      <a href="#sobre">Sobre mí</a>
+      <a href="#enfoque">Enfoque</a>
+      <a href="#proyectos">Portafolio</a>
+      <a href="#experiencia">Experiencia</a>
+    </nav>
+    <a href="#contacto" class="mast-cta">Contacto</a>
+    <button class="burger" id="burger" aria-label="Abrir índice" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Índice" aria-hidden="true">
+  <button class="drawer-overlay" type="button" data-drawer-close aria-label="Cerrar índice"></button>
+  <div class="drawer-card" role="document">
+    <div class="drawer-head">
+      <span class="drawer-knot" aria-hidden="true">AA</span>
+      <p class="drawer-title"><span>Navegación</span><b>Índice rápido</b></p>
+      <button class="drawer-x" type="button" data-drawer-close aria-label="Cerrar índice"><span aria-hidden="true"></span></button>
+    </div>
+    <nav class="drawer-menu" aria-label="Navegación móvil">
+      <a href="#sobre" style="--i:0"><span>01</span><b>Sobre mí</b><em>Perfil</em></a>
+      <a href="#enfoque" style="--i:1"><span>02</span><b>Enfoque</b><em>Método</em></a>
+      <a href="#proyectos" style="--i:2"><span>03</span><b>Portafolio</b><em>Casos</em></a>
+      <a href="#experiencia" style="--i:3"><span>04</span><b>Experiencia</b><em>Trayectoria</em></a>
+      <a href="#contacto" style="--i:4"><span>05</span><b>Contacto</b><em>Cierre</em></a>
+    </nav>
+    <div class="drawer-actions" aria-label="Acciones rápidas">
+      <a href="mailto:arvizu3@me.com" style="--i:0">Email</a>
+      <a href="tel:+528120367811" style="--i:1">Tel</a>
+      <a href="Alan-Arvizu-CV.pdf" target="_blank" rel="noopener" style="--i:2">CV</a>
+    </div>
+  </div>
+</div>
+
+<main id="contenido">
+
+<!-- ============ HERO · SALUDO ============ -->
+<section class="hero" aria-label="Inicio — Alan Arvizu">
+  <div class="hero-inner">
+    <p class="hero-hello" aria-label="Hello!">
+      <span class="hello-outline" aria-hidden="true">Hello!</span>
+      <span class="hello-fill" aria-hidden="true">Hello!</span>
+    </p>
+    <div class="hero-portrait hero-enter">
+      <img src="assets/hero-portrait.png" alt="Retrato de Alan Arvizu en blanco y negro" width="1023" height="1537" />
+    </div>
+    <div class="hero-detail">
+      <h1 class="hero-name hero-enter">Alan Arvizu</h1>
+      <p class="hero-lead hero-enter">Trabajo entre diseño, marketing y gestión para ordenar ideas, marcas y proyectos desde el concepto hasta la ejecución.</p>
+      <p class="hero-tags hero-enter">Estrategia <i>·</i> Gestión <i>·</i> Comunicación</p>
+      <p class="hero-loc hero-enter">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+        Monterrey, México
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTADA ============ -->
+<section class="cover" aria-label="Portada — Alan Arvizu">
+  <div class="wrap">
+    <p class="cover-eyebrow">Estrategia · Gestión · Comunicación</p>
+    <h2 class="cover-title">Diseño con<br><b>criterio estratégico.</b></h2>
+    <p class="cover-sub">Diseño desde la claridad: ordeno ideas, alineo objetivos y acompaño proyectos desde el concepto hasta la ejecución.</p>
+
+    <div class="cover-foot">
+      <nav class="index" aria-label="Contenido del expediente">
+        <a href="#sobre"><span class="ix-t">Sobre mí</span><span class="ix-d">Diseñador de formación, estratega por evolución</span></a>
+        <a href="#enfoque"><span class="ix-t">Enfoque</span><span class="ix-d">El método en cuatro movimientos</span></a>
+        <a href="#proyectos"><span class="ix-t">Portafolio</span><span class="ix-d">Cuatro proyectos como evidencia de criterio</span></a>
+        <a href="#experiencia"><span class="ix-t">Experiencia</span><span class="ix-d">Del diseño a la dirección de proyectos</span></a>
+        <a href="#contacto"><span class="ix-t">Contacto</span><span class="ix-d">Una idea convertida en proyecto</span></a>
+      </nav>
+
+      <aside class="idcard" aria-label="Ficha de identidad">
+        <h2>En síntesis</h2>
+        <dl>
+          <dt>Perfil</dt><dd>Diseño y gestión estratégica</dd>
+          <dt>Base</dt><dd>Monterrey, N.L.</dd>
+          <dt>Campo</dt><dd>Diseño, marketing, comunicación, estrategia y gestión</dd>
+          <dt>Hoy</dt><dd>Hamilton Window Fashion · B2B</dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 · SOBRE MÍ ============ -->
+<section id="sobre" class="pad">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="s-name">Sobre mí</span>
+      <span class="s-meta">Perfil</span>
+    </div>
+    <div class="sobre">
+      <div class="sobre-body">
+        <p class="lede reveal d1">Diseñador de formación, <b>estratega</b> por evolución.</p>
+        <p class="body reveal d2">Mi experiencia me ha llevado a trabajar entre creatividad, marketing, operación y gestión, entendiendo que los mejores proyectos no dependen solamente de una buena idea, sino de la estructura necesaria para llevarla a cabo.</p>
+        <p class="body reveal d2">Hoy trabajo donde se cruzan la visión de negocio, la organización y la ejecución creativa: dando dirección a marcas, proyectos y equipos.</p>
+        <div class="sobre-disc reveal d3">
+          <span>Dirección creativa</span>
+          <span>Estrategia de marca</span>
+          <span>Gestión de proyectos</span>
+          <span>Comunicación</span>
+          <span>Marketing</span>
+          <span>Visión de negocio</span>
+        </div>
+      </div>
+      <div class="plate reveal d2">
+        <figure>
+          <img src="assets/about.jpg" alt="Alan Arvizu en su espacio de trabajo" />
+        </figure>
+        <figcaption></figcaption>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 · ENFOQUE (marfil) ============ -->
+<section id="enfoque" class="pad enfoque">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="s-name">Enfoque</span>
+      <span class="s-meta">El método</span>
+    </div>
+    <p class="manifesto reveal d1">Los proyectos no avanzan por una buena idea, sino por la <em>estrategia</em> que la dirige, la <em>gestión</em> que la ordena, la <em>comunicación</em> que la alinea y la <em>ejecución</em> que la vuelve real.</p>
+    <div class="method">
+      <div class="step reveal"><span class="step-n num">01</span><h3>Estrategia</h3><p>Visión de negocio que da dirección antes de ejecutar.</p></div>
+      <div class="step reveal"><span class="step-n num">02</span><h3>Gestión</h3><p>Método PMBOK para planear, organizar y dar trazabilidad.</p></div>
+      <div class="step reveal"><span class="step-n num">03</span><h3>Comunicación</h3><p>Un mensaje claro que alinea marca, equipo y audiencia.</p></div>
+      <div class="step reveal"><span class="step-n num">04</span><h3>Ejecución</h3><p>Criterio creativo que convierte el plan en algo real.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · PROYECTOS — fichas de expediente ============ -->
+<section id="proyectos" class="pad">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="s-name">Portafolio</span>
+      <span class="s-meta">Proyectos · Cuatro casos</span>
+    </div>
+    <p class="lede reveal d1" style="margin-bottom:clamp(36px,6vh,64px)">Cada caso es <b>evidencia de criterio</b>, no sólo una pieza visual.</p>
+
+    <div class="cases">
+
+      <!-- 01 · Universe 360 -->
+      <article class="case reveal" style="--cc:var(--c-universe)">
+        <div class="case-aside">
+          <div class="case-n num"><span class="cdot" aria-hidden="true"></span>01</div>
+          <dl class="case-meta">
+            <dt>Rol</dt><dd>Dirección creativa</dd>
+            <dt>Ámbito</dt><dd>Identidad · Espacio · Comunicación</dd>
+            <dt>Sector</dt><dd>Fitness · Marca de destino</dd>
+          </dl>
+        </div>
+        <div class="case-main">
+          <p class="case-kicker">Caso 01 — Dirección creativa</p>
+          <h3 class="case-title">Universe 360</h3>
+          <p class="case-concept">Un gimnasio convertido en un destino de marca.</p>
+          <p class="case-body">Dirección creativa de una experiencia integral: identidad, espacio y comunicación trabajando como un solo sistema para transformar un gimnasio en un destino con carácter propio.</p>
+          <dl class="case-proof">
+            <dt>Demuestra</dt>
+            <dd>Capacidad de unificar identidad, espacio y mensaje bajo una misma dirección, en lugar de resolver cada pieza por separado.</dd>
+          </dl>
+          <figure class="case-fig"><img src="assets/universe.jpg" alt="Universe 360 — dirección creativa de un destino de marca" /></figure>
+        </div>
+      </article>
+
+      <!-- 02 · Afirme · Machaca Fest -->
+      <article class="case reveal" style="--cc:var(--c-afirme)">
+        <div class="case-aside">
+          <div class="case-n num"><span class="cdot" aria-hidden="true"></span>02</div>
+          <dl class="case-meta">
+            <dt>Rol</dt><dd>Sistema visual · Campaña</dd>
+            <dt>Ámbito</dt><dd>Sistema visual · Activación</dd>
+            <dt>Sector</dt><dd>Financiero · Cultural</dd>
+          </dl>
+        </div>
+        <div class="case-main">
+          <p class="case-kicker">Caso 02 — Sistema visual · Campaña</p>
+          <h3 class="case-title">Afirme · Machaca Fest</h3>
+          <p class="case-concept">Una marca financiera que se vuelve experiencia de festival.</p>
+          <p class="case-body">Sistema visual y comunicación de campaña para llevar una marca financiera al terreno cultural del festival, con energía y consistencia en cada punto de contacto.</p>
+          <dl class="case-proof">
+            <dt>Demuestra</dt>
+            <dd>Criterio para trasladar una marca seria a un contexto cultural sin perder consistencia entre puntos de contacto.</dd>
+          </dl>
+          <figure class="case-fig"><img src="assets/afirme.jpg" alt="Afirme · Machaca Fest — sistema visual de campaña" /></figure>
+        </div>
+      </article>
+
+      <!-- 03 · Hamilton Window Fashion -->
+      <article class="case reveal" style="--cc:var(--c-hamilton)">
+        <div class="case-aside">
+          <div class="case-n num"><span class="cdot" aria-hidden="true"></span>03</div>
+          <dl class="case-meta">
+            <dt>Rol</dt><dd>Estrategia · Comunicación</dd>
+            <dt>Ámbito</dt><dd>Web · SEO · Comunicación de producto</dd>
+            <dt>Sector</dt><dd>B2B · Persianas y automatización</dd>
+          </dl>
+        </div>
+        <div class="case-main">
+          <p class="case-kicker">Caso 03 — Estrategia · Comunicación · Web/SEO</p>
+          <h3 class="case-title">Hamilton Window Fashion</h3>
+          <p class="case-concept">Comunicación comercial para ordenar una marca técnica.</p>
+          <p class="case-body">Desarrollo de piezas, contenidos y estructura digital para una marca B2B de persianas, cortinas y automatización. El trabajo conecta campañas, sitio web, SEO, materiales para distribuidores y comunicación de producto bajo un sistema más claro, consistente y útil para ventas.</p>
+          <dl class="case-proof">
+            <dt>Demuestra</dt>
+            <dd>Pensamiento de sistema aplicado a una marca técnica: ordenar comunicación, web y soporte comercial al servicio de ventas.</dd>
+          </dl>
+          <div class="case-swatch" role="img" aria-label="Hamilton Window Fashion — arquitectura de comunicación B2B">
+            <span class="sw-mark">Hamilton WF · B2B</span>
+            <span class="sw-name"><b>Arquitectura de</b>comunicación.</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 · Joy Brands · BTL -->
+      <article class="case reveal" style="--cc:var(--c-joy)">
+        <div class="case-aside">
+          <div class="case-n num"><span class="cdot" aria-hidden="true"></span>04</div>
+          <dl class="case-meta">
+            <dt>Rol</dt><dd>Concepto · Master graphics</dd>
+            <dt>Ámbito</dt><dd>BTL · Activación · Licitación</dd>
+            <dt>Sector</dt><dd>Agencia · Marca</dd>
+          </dl>
+        </div>
+        <div class="case-main">
+          <p class="case-kicker">Caso 04 — Concepto · Master graphics · Activación</p>
+          <h3 class="case-title">Joy Brands · Campañas BTL</h3>
+          <p class="case-concept">Ideas de marca convertidas en sistemas visuales para activación.</p>
+          <p class="case-body">Participación en el desarrollo de conceptos, master graphics y comunicación visual para campañas BTL, activaciones y licitaciones: traducir objetivos de marca en sistemas gráficos claros, adaptables y consistentes para distintos puntos de contacto, cuidando intención creativa, orden visual y viabilidad de ejecución.</p>
+          <dl class="case-proof">
+            <dt>Demuestra</dt>
+            <dd>Equilibrio entre intención creativa y viabilidad de ejecución: conceptos que se sostienen al escalar a múltiples piezas.</dd>
+          </dl>
+          <div class="case-swatch" role="img" aria-label="Joy Brands — un concepto, muchas formas">
+            <span class="sw-mark">Joy Brands · BTL</span>
+            <span class="sw-name"><b>Un concepto,</b>muchas formas.</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · EXPERIENCIA — registro ============ -->
+<section id="experiencia" class="pad" style="background:var(--marfil-2)">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="s-name">Experiencia</span>
+      <span class="s-meta">Trayectoria</span>
+    </div>
+    <p class="lede reveal d1" style="margin-bottom:clamp(40px,6vh,64px)">Del diseño a la <b>dirección</b> de proyectos.</p>
+    <div class="ledger">
+      <div class="ledger-head"><span>Fase</span><span>Rol</span><span>Aporte</span></div>
+      <div class="row reveal"><div class="row-phase">Formación</div><div><div class="row-role">Lic. en Diseño Gráfico</div><div class="row-place">UANL</div></div><p class="row-note">La base visual y conceptual sobre la que se construye todo lo demás.</p></div>
+      <div class="row reveal"><div class="row-phase">Dirección</div><div><div class="row-role">Das Gesicht</div><div class="row-place">Estudio</div></div><p class="row-note">El primer rol donde dirigir y ordenar el proyecto pesó tanto como diseñarlo.</p></div>
+      <div class="row reveal"><div class="row-phase">Negocio</div><div><div class="row-role">Maestrías</div><div class="row-place">TecMilenio</div></div><p class="row-note">La visión de negocio que conecta la creatividad con la rentabilidad y la operación.</p></div>
+      <div class="row reveal"><div class="row-phase">Creatividad</div><div><div class="row-role">Joy Brands</div><div class="row-place">Agencia</div></div><p class="row-note">Branding, campañas BTL y dirección creativa, gestionando proyectos de la idea a la ejecución.</p></div>
+      <div class="row key reveal"><div class="row-phase">Método</div><div><div class="row-role">Project Management Professional</div><div class="row-place">PMP</div></div><p class="row-note">El punto de inflexión hacia la gestión: estructurar, planear y dirigir proyectos con trazabilidad.</p></div>
+      <div class="row key reveal"><div class="row-phase">Estrategia</div><div><div class="row-role">Hamilton Window Fashion</div><div class="row-place">B2B · presente</div></div><p class="row-note">Posicionamiento de marca, análisis de mercado y comunicación comercial de alto impacto.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 05 · CONTACTO / COLOFÓN ============ -->
+<footer id="contacto" class="pad colophon">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="s-name">Contacto</span>
+      <span class="s-meta">Cierre</span>
+    </div>
+    <h2 class="contact-big reveal d1">Convirtamos una idea en un proyecto con <b>dirección.</b></h2>
+    <a href="mailto:arvizu3@me.com" class="mail reveal d2">arvizu3@me.com</a>
+    <div class="contact-row reveal d3">
+      <a href="https://www.linkedin.com/in/arvizu/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+      <a href="tel:+528120367811">+52 81 2036 7811</a>
+      <a href="Alan-Arvizu-CV.pdf" target="_blank" rel="noopener">Descargar CV <span aria-hidden="true">↓</span></a>
+    </div>
+
+    <div class="colo-base">
+      <div class="colo-col">
+        <div class="colo-brand">
+          <svg class="mk" viewBox="0 0 200 201.34" aria-hidden="true"><path d="M188.99,148.65L123.84,20.09c-5.09-10.04-15.24-16.41-26.5-16.62-11.29-.2-21.64,5.78-27.1,15.63l-13.59,24.53c-7.87,14.2-3.21,32.01,10.59,40.52l25.72,15.94,12.88-20.79-25.74-15.95c-2.68-1.65-3.58-5.1-2.06-7.85l13.59-24.53c1.55-2.79,4.19-3.02,5.25-3.03,1.06.02,3.69.37,5.13,3.22l65.15,128.56c1.24,2.45.59,5.49-1.54,7.22-1.96,1.59-4.7,1.75-6.83.41l-99.3-62.57c-7.14-4.5-15.92-5.83-24.06-3.62-8.15,2.19-15.07,7.75-18.99,15.22l-9.54,18.23c-7.1,13.57-2.95,30.35,9.75,39.1l35.72,24.18h43.63l-65.54-44.38c-2.44-1.69-3.25-4.94-1.87-7.56l9.54-18.23c1.04-1.99,2.75-2.7,3.68-2.95.93-.25,2.77-.49,4.66.7l99.3,62.57c11,6.93,25.18,6.09,35.28-2.1,11.03-8.94,14.37-24.62,7.95-37.28"/></svg>
+          <span class="wm">Alan Arvizu</span>
+        </div>
+        <p class="colo-intro">Estrategia, gestión y comunicación para proyectos que necesitan dirección, no sólo una buena idea.</p>
+      </div>
+      <div class="colo-col">
+        <h4>Índice</h4>
+        <a href="#sobre">Sobre mí</a>
+        <a href="#enfoque">Enfoque</a>
+        <a href="#proyectos">Portafolio</a>
+        <a href="#experiencia">Experiencia</a>
+      </div>
+      <div class="colo-col">
+        <h4>Directo</h4>
+        <a href="mailto:arvizu3@me.com">arvizu3@me.com</a>
+        <a href="tel:+528120367811">+52 81 2036 7811</a>
+        <a href="https://www.linkedin.com/in/arvizu/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="Alan-Arvizu-CV.pdf" target="_blank" rel="noopener">Descargar CV</a>
+      </div>
+    </div>
+    <div class="colo-foot">
+      <span>© <span id="year"></span> Alan Arvizu — Monterrey, N.L.</span>
+      <span>Estrategia · Gestión · Comunicación</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* masthead hairline once scrolled */
+  var mast = document.getElementById("mast");
+  function mastState(){ mast.classList.toggle("solid", window.scrollY > 12); }
+  mastState();
+  window.addEventListener("scroll", mastState, {passive:true});
+
+  /* mobile drawer */
+  var burger = document.getElementById("burger"),
+      drawer = document.getElementById("drawer");
+  function setDrawer(o){
+    drawer.classList.toggle("open", o);
+    drawer.setAttribute("aria-hidden", o ? "false" : "true");
+    burger.setAttribute("aria-expanded", o ? "true" : "false");
+    burger.setAttribute("aria-label", o ? "Cerrar índice" : "Abrir índice");
+    document.body.style.overflow = o ? "hidden" : "";
+  }
+  burger.addEventListener("click", function(){ setDrawer(!drawer.classList.contains("open")); });
+  drawer.querySelectorAll("a, [data-drawer-close]").forEach(function(el){ el.addEventListener("click", function(){ setDrawer(false); }); });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && drawer.classList.contains("open")){ setDrawer(false); burger.focus(); }
+  });
+
+  /* reveal on scroll */
+  var reveals = [].slice.call(document.querySelectorAll(".reveal"));
+  if("IntersectionObserver" in window && !reduce){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, {threshold:.15, rootMargin:"0px 0px -7% 0px"});
+    reveals.forEach(function(el){ io.observe(el); });
+    reveals.forEach(function(el){ if(el.getBoundingClientRect().top < window.innerHeight*0.92) el.classList.add("in"); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add("in"); });
+  }
+
+  /* active section in masthead index */
+  var navLinks = [].slice.call(document.querySelectorAll("#mastNav a"));
+  var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute("href")); });
+  if("IntersectionObserver" in window){
+    var so = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var id = "#" + en.target.id;
+          navLinks.forEach(function(a){ a.classList.toggle("active", a.getAttribute("href") === id); });
+        }
+      });
+    }, {rootMargin:"-45% 0px -50% 0px", threshold:0});
+    sections.forEach(function(s){ if(s) so.observe(s); });
+  }
+
+  /* year */
+  var y = document.getElementById("year"); if(y) y.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
